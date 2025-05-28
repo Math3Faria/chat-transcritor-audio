@@ -157,7 +157,7 @@ st.markdown(
 
 # --- Cabeçalho da Aplicação ---
 st.title(" Transcritor e Tradutor de Áudio do Matheus🤯")
-st.markdown("Transforme **áudios** em **texto** e traduza para **diversos idiomas** usando o poder da inteligência artificial!")
+st.markdown("A melhor plataforma para voce transformar audio em texto")
 
 # --- Configuração da API Gemini ---
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
@@ -195,7 +195,7 @@ if GEMINI_API_KEY:
                            "Considere mudar para `gemini-1.5-flash` ou `gemini-1.5-pro` para maior longevidade e recursos.")
 
             model = genai.GenerativeModel(MODEL_NAME)
-            st.success(f"API Gemini configurada com sucesso. Usando o modelo: `{MODEL_NAME}`.")
+            st.success(f"API gerada com ajuda do nosso colega GEMINI")
         else:
             st.error("❌ Nenhum modelo da API Gemini com capacidade de 'generateContent' foi encontrado. "
                      "Verifique as permissões da sua API Key ou a disponibilidade dos modelos na sua região. "
@@ -238,7 +238,7 @@ st.sidebar.markdown("---")
 
 
 # --- Área Principal de Upload ---
-st.subheader("⬆️ Faça o Upload do seu Áudio")
+st.subheader("É só colocar teu audio ai embaixo meu amigo👇")
 uploaded_file = st.file_uploader("Selecione um arquivo de áudio WAV (Máx: 25MB para SpeechRecognition)", type=["wav"])
 
 if uploaded_file is not None:
@@ -303,5 +303,5 @@ else:
     st.info("👆 Por favor, faça upload de um arquivo WAV para começar a transcrever e traduzir.")
 
 st.markdown("---")
-st.markdown("Desenvolvido com o poder da **IA** para simplificar suas transcrições e traduções.")
+st.markdown("Desenvolvido pelo matheus, para simplificar suas transcrições e traduções dos audios que vocês colocarem")
 st.markdown("Feito por **Matheus**")
